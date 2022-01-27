@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.liobio.demo.dao.CompanyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.liobio.demo.entity.CompanyEntity" id="companyMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="shortName" column="short_name"/>
+        <result property="jopId" column="jop_id"/>
+        <result property="number" column="number"/>
+        <result property="auditInformation" column="audit_information"/>
+        <result property="info" column="info"/>
+        <result property="registerTime" column="register_time"/>
+        <result property="address" column="address"/>
+        <result property="state" column="state"/>
+    </resultMap>
+
+
+</mapper>

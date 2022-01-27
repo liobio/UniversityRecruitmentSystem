@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.liobio.demo.dao.RecruitmentDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.liobio.demo.entity.RecruitmentEntity" id="recruitmentMap">
+        <result property="id" column="id"/>
+        <result property="jobId" column="job_id"/>
+        <result property="areaId" column="area_id"/>
+        <result property="recruitingNumber" column="recruiting_number"/>
+        <result property="salary" column="salary"/>
+        <result property="jobInfo" column="job_info"/>
+        <result property="majorId" column="major_id"/>
+        <result property="degreeId" column="degree_id"/>
+        <result property="sex" column="sex"/>
+        <result property="hrId" column="hr_id"/>
+        <result property="tel" column="tel"/>
+        <result property="email" column="email"/>
+        <result property="time" column="time"/>
+    </resultMap>
+
+
+</mapper>
