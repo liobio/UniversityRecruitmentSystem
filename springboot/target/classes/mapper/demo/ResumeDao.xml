@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.liobio.demo.dao.ResumeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.liobio.demo.entity.ResumeEntity" id="resumeMap">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="name" column="name"/>
+        <result property="sex" column="sex"/>
+        <result property="birthday" column="birthday"/>
+        <result property="nativePlace" column="native_place"/>
+        <result property="national" column="national"/>
+        <result property="politicalAffiliation" column="political_affiliation"/>
+        <result property="presentArea" column="present_area"/>
+        <result property="tel" column="tel"/>
+        <result property="email" column="email"/>
+        <result property="graduatedUniversity" column="graduated_university"/>
+        <result property="major" column="major"/>
+        <result property="degree" column="degree"/>
+        <result property="personalIntroduction" column="personal_introduction"/>
+        <result property="expectedSalary" column="expected_salary"/>
+        <result property="expectedJob" column="expected_job"/>
+        <result property="expectedArea" column="expected_area"/>
+        <result property="projectExperience" column="project_experience"/>
+        <result property="state" column="state"/>
+    </resultMap>
+
+
+</mapper>

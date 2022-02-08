@@ -1,6 +1,7 @@
 <template>
+
   <div style="height: 55px;line-height: 50px;border-bottom: 1px solid #ccc;display: flex;background:#545c64">
-    <div style="width: 200px ;padding-left: 30px;font-weight: bold;color: white;background:#545c64">
+    <div style="width: 200px ;padding-left: 25px;font-weight: bold;color: white;background:#545c64">
       校园招聘后台管理
     </div>
     <div style="flex: 1"></div>
@@ -22,11 +23,13 @@
 </template>
 
 <script>
-import { ArrowDown } from '@element-plus/icons-vue'
+import {
+  ArrowDown,
+ } from '@element-plus/icons-vue'
 export default {
   name: "Header",
   components:{
-    ArrowDown
+    ArrowDown,
   }
 }
 </script>

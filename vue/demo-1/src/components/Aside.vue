@@ -1,34 +1,33 @@
 <template>
   <div>
     <el-menu
-        style="width: 200px;height: 94vh"
-        active-text-color="#1e90ff"
+
+        style="width: 200px;height: 94vh;"
+        active-text-color="#fff"
         background-color="#545c64"
-        class="el-menu-vertical-demo"
         default-active="2"
         text-color="#fff"
+
     >
-      <el-sub-menu index="1">
-        <template #title>
-          <el-icon><location /></el-icon>
-          <span>Navigator One</span>
-        </template>
-        <el-sub-menu index="1-1">
-          <template #title>item one</template>
-          <el-menu-item index="1-1-1">item one</el-menu-item>
-        </el-sub-menu>
-      </el-sub-menu>
-      <el-menu-item index="2">
-        <el-icon><icon-menu /></el-icon>
-        <span>Navigator Two</span>
+      <el-menu-item index="1">
+          <el-icon><avatar /></el-icon>
+          <span>管理员</span>
       </el-menu-item>
+      <el-sub-menu index="2">
+        <template #title>
+          <el-icon><school /></el-icon>
+          <span>企业管理</span>
+        </template>
+        <el-menu-item index="2-1">企业审核</el-menu-item>
+        <el-menu-item index="2-2">企业信息</el-menu-item>
+      </el-sub-menu>
       <el-menu-item index="3" >
-        <el-icon><document /></el-icon>
-        <span>Navigator Three</span>
+        <el-icon><user-filled/></el-icon>
+        <span>人事管理人员</span>
       </el-menu-item>
       <el-menu-item index="4">
-        <el-icon><setting /></el-icon>
-        <span>Navigator Four</span>
+        <el-icon><user /></el-icon>
+        <span>用户</span>
       </el-menu-item>
     </el-menu>
   </div>
@@ -37,20 +36,25 @@
 
 <script>
 import {
-  Location,
-  Document,
-  Menu as IconMenu,
-  Setting,
+  Avatar,
+  School,
+  UserFilled,
+  User,
 } from '@element-plus/icons-vue'
 
 export default {
   name: "Aside",
   components:{
-    Location,Document,IconMenu,Setting
+    Avatar,School,UserFilled,User
   }
 }
 </script>
 
 <style scoped>
 
+.el-menu-item.is-active{
+  /*设置菜单选择背景颜色变化*/
+  background-color: #42494f !important;
+
+}
 </style>

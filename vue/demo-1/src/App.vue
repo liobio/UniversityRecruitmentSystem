@@ -25,7 +25,8 @@ export default {
   name:"Layout",
   components:{
     Header,
-    Aside
+    Aside,
+
   }
 }
 </script>

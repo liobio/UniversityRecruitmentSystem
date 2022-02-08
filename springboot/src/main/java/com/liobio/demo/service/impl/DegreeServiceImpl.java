@@ -13,7 +13,7 @@ import com.liobio.demo.entity.DegreeEntity;
 import com.liobio.demo.service.DegreeService;
 
 
-@Service("degreeService")
+@Service("DegreeService")
 public class DegreeServiceImpl extends ServiceImpl<DegreeDao, DegreeEntity> implements DegreeService {
 
     @Override

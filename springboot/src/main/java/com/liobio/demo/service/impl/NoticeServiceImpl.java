@@ -13,7 +13,7 @@ import com.liobio.demo.entity.NoticeEntity;
 import com.liobio.demo.service.NoticeService;
 
 
-@Service("noticeService")
+@Service("NoticeService")
 public class NoticeServiceImpl extends ServiceImpl<NoticeDao, NoticeEntity> implements NoticeService {
 
     @Override

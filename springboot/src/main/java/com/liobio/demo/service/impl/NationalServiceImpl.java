@@ -13,7 +13,7 @@ import com.liobio.demo.entity.NationalEntity;
 import com.liobio.demo.service.NationalService;
 
 
-@Service("nationalService")
+@Service("NationalService")
 public class NationalServiceImpl extends ServiceImpl<NationalDao, NationalEntity> implements NationalService {
 
     @Override

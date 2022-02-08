@@ -13,7 +13,7 @@ import com.liobio.demo.entity.PoliticalAffiliationEntity;
 import com.liobio.demo.service.PoliticalAffiliationService;
 
 
-@Service("politicalAffiliationService")
+@Service("PoliticalAffiliationService")
 public class PoliticalAffiliationServiceImpl extends ServiceImpl<PoliticalAffiliationDao, PoliticalAffiliationEntity> implements PoliticalAffiliationService {
 
     @Override

@@ -13,7 +13,7 @@ import com.liobio.demo.entity.UserEntity;
 import com.liobio.demo.service.UserService;
 
 
-@Service("userService")
+@Service("UserService")
 public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements UserService {
 
     @Override

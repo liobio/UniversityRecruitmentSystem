@@ -13,7 +13,7 @@ import com.liobio.demo.entity.NativePlaceEntity;
 import com.liobio.demo.service.NativePlaceService;
 
 
-@Service("nativePlaceService")
+@Service("NativePlaceService")
 public class NativePlaceServiceImpl extends ServiceImpl<NativePlaceDao, NativePlaceEntity> implements NativePlaceService {
 
     @Override

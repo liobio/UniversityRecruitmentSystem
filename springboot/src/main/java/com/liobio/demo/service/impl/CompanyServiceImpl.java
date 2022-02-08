@@ -13,7 +13,7 @@ import com.liobio.demo.entity.CompanyEntity;
 import com.liobio.demo.service.CompanyService;
 
 
-@Service("companyService")
+@Service("CompanyService")
 public class CompanyServiceImpl extends ServiceImpl<CompanyDao, CompanyEntity> implements CompanyService {
 
     @Override

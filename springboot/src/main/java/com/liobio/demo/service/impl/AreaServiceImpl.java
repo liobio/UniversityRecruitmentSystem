@@ -13,7 +13,7 @@ import com.liobio.demo.entity.AreaEntity;
 import com.liobio.demo.service.AreaService;
 
 
-@Service("areaService")
+@Service("AreaService")
 public class AreaServiceImpl extends ServiceImpl<AreaDao, AreaEntity> implements AreaService {
 
     @Override

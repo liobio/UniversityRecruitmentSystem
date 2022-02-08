@@ -13,8 +13,10 @@ import com.liobio.demo.entity.AdminEntity;
 import com.liobio.demo.service.AdminService;
 
 
-@Service("adminService")
+@Service("AdminService")
 public class AdminServiceImpl extends ServiceImpl<AdminDao, AdminEntity> implements AdminService {
+
+
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {

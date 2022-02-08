@@ -13,7 +13,7 @@ import com.liobio.demo.entity.UniversityEntity;
 import com.liobio.demo.service.UniversityService;
 
 
-@Service("universityService")
+@Service("UniversityService")
 public class UniversityServiceImpl extends ServiceImpl<UniversityDao, UniversityEntity> implements UniversityService {
 
     @Override

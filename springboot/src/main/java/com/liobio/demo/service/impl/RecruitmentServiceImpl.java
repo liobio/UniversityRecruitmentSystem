@@ -13,7 +13,7 @@ import com.liobio.demo.entity.RecruitmentEntity;
 import com.liobio.demo.service.RecruitmentService;
 
 
-@Service("recruitmentService")
+@Service("RecruitmentService")
 public class RecruitmentServiceImpl extends ServiceImpl<RecruitmentDao, RecruitmentEntity> implements RecruitmentService {
 
     @Override

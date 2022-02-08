@@ -5,7 +5,10 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * 
@@ -35,14 +38,16 @@ public class AdminEntity implements Serializable {
 	/**
 	 * 
 	 */
-	private String level;
+	private Integer level;
 	/**
 	 * 
 	 */
-	private Date register_time;
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private Date registerTime;
 	/**
 	 * 
 	 */
-	private String state;
+	private Integer state;
 
 }

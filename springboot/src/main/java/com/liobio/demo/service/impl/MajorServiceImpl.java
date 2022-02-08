@@ -13,7 +13,7 @@ import com.liobio.demo.entity.MajorEntity;
 import com.liobio.demo.service.MajorService;
 
 
-@Service("majorService")
+@Service("MajorService")
 public class MajorServiceImpl extends ServiceImpl<MajorDao, MajorEntity> implements MajorService {
 
     @Override

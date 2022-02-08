@@ -13,7 +13,7 @@ import com.liobio.demo.entity.ResumeEntity;
 import com.liobio.demo.service.ResumeService;
 
 
-@Service("resumeService")
+@Service("ResumeService")
 public class ResumeServiceImpl extends ServiceImpl<ResumeDao, ResumeEntity> implements ResumeService {
 
     @Override

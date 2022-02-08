@@ -8,7 +8,7 @@
 
 package com.liobio.common.xss;
 
-import io.renren.common.exception.RRException;
+import com.liobio.common.utils.RRException;
 import org.apache.commons.lang.StringUtils;
 
 /**

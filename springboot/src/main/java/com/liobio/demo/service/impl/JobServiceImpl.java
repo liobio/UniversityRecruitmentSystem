@@ -13,7 +13,7 @@ import com.liobio.demo.entity.JobEntity;
 import com.liobio.demo.service.JobService;
 
 
-@Service("jobService")
+@Service("JobService")
 public class JobServiceImpl extends ServiceImpl<JobDao, JobEntity> implements JobService {
 
     @Override

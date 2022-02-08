@@ -3,6 +3,7 @@ package com.liobio.demo.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.liobio.common.utils.PageUtils;
 import com.liobio.demo.entity.AdminEntity;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
