@@ -1,7 +1,6 @@
 package com.liobio.demo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.liobio.common.utils.PageUtils;
 import com.liobio.demo.entity.UniversityEntity;
 
 import java.util.Map;
@@ -15,6 +14,5 @@ import java.util.Map;
  */
 public interface UniversityService extends IService<UniversityEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
 }
 

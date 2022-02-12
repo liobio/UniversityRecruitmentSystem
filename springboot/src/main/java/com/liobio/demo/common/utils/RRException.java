@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.liobio.common.utils;
+package com.liobio.demo.common.utils;
 
 /**
  * 自定义异常

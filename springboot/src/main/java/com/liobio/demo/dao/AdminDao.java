@@ -1,8 +1,10 @@
 package com.liobio.demo.dao;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.liobio.demo.entity.AdminEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 
@@ -13,5 +15,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface AdminDao extends BaseMapper<AdminEntity> {
+
+
+
 	
 }

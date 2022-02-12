@@ -1,11 +1,10 @@
 package com.liobio.demo.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.liobio.common.utils.PageUtils;
 import com.liobio.demo.entity.AdminEntity;
-import org.springframework.stereotype.Service;
 
-import java.util.Map;
+
 
 /**
  * 
@@ -15,7 +14,8 @@ import java.util.Map;
  * @date 2022-01-27 23:20:58
  */
 public interface AdminService extends IService<AdminEntity> {
+    Page<AdminEntity> findPage(Integer pageNum, Integer pageSize, String search);
 
-    PageUtils queryPage(Map<String, Object> params);
+    public boolean deleteById(long  id);
 }
 

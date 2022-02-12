@@ -1,15 +1,11 @@
 package com.liobio.demo.controller;
 
-import java.util.Arrays;
-import java.util.Map;
+
+import com.liobio.demo.common.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import com.liobio.demo.entity.AdminEntity;
 import com.liobio.demo.service.AdminService;
-import com.liobio.common.utils.PageUtils;
-import com.liobio.common.utils.R;
-
 
 
 /**
@@ -29,13 +25,42 @@ public class AdminController {
      * 保存
      */
     @PostMapping()
-    public R save(@RequestBody AdminEntity admin){
+    public Result<?> save(@RequestBody AdminEntity admin){
         adminService.save(admin);
-        return R.ok();
+        return Result.success();
     }
-//    /**
-//     * 列表
-//     */
+    /**
+     *  更新
+     */
+    @PutMapping
+    public Result<?> update(@RequestBody AdminEntity admin) {
+        adminService.updateById(admin);
+        return Result.success();
+    }
+    /**
+     *
+     */
+    @DeleteMapping("/{id}")
+    public Result<?> delete(@PathVariable Integer id) {
+        adminService.deleteById(id);
+        return Result.success();
+    }
+    /**
+     * 分页查询
+     */
+    @GetMapping
+    public Result<?> findAdminPage(@RequestParam(defaultValue = "1") Integer pageNum,
+                                   @RequestParam(defaultValue = "20") Integer pageSize,
+                                   @RequestParam(defaultValue = "") String search) {
+        return Result.success(adminService.findPage(pageNum, pageSize, search));
+    }
+
+
+
+
+    /**
+     * 列表
+     */
 //    @RequestMapping("/list")
 //    public R list(@RequestParam Map<String, Object> params){
 //        PageUtils page = adminService.queryPage(params);

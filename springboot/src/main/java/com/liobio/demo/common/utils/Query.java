@@ -5,12 +5,12 @@
  *
  * 版权所有，侵权必究！
  */
-package com.liobio.common.utils;
+package com.liobio.demo.common.utils;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.liobio.common.xss.SQLFilter;
+import com.liobio.demo.common.xss.SQLFilter;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.Map;

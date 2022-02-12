@@ -10,7 +10,7 @@
     <div style="margin: 5px 10px" >
       <el-input v-model="search" placeholder="Please input" clearable style="width: 40vh">
         <template #append >
-          <el-button type="primary">
+          <el-button type="primary" @click="load">
             <el-icon >
               <Search />
             </el-icon>
@@ -93,10 +93,10 @@
           width="170"
       >
         <template #default="scope">
-          <el-button  type="primary"  @click="handleEdit">
+          <el-button  type="primary"  @click="handleEdit(scope.row)">
             编辑
           </el-button>
-          <el-popconfirm title="确定删除吗？" @click="handleDetail">
+          <el-popconfirm title="确定删除吗？" @confirm="handleDetail(scope.row.id)">
             <template #reference>
               <el-button  type="danger" >删除</el-button>
             </template>
@@ -106,8 +106,25 @@
     </el-table>
 <!--    分页-->
     <div style="margin: 10px 0;text-align: center">
-      <el-pagination background layout="prev, pager, next" :total="1000">
+<!--      <el-pagination-->
+<!--          background-->
+<!--          layout="prev, pager, next"-->
+<!--          :total="1000"-->
+<!--          :hide-on-single-page="true">-->
+<!--      </el-pagination>-->
+      <el-pagination class="el-pagination_Color"
+          background
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="currentPage"
+          :page-sizes="[10, 20, 50]"
+          :page-size="pageSize"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="total"
+
+      >
       </el-pagination>
+
     </div>
 <!--    对话框-->
     <el-dialog
@@ -124,15 +141,15 @@
               v-model="admin_form.level"
               placeholder="please select level"
           >
-            <el-option label="1(全部权限）" value="1"></el-option>
-            <el-option label="2(审核)" value="2"></el-option>
-            <el-option label="3(搜索发布通告)" value="3"></el-option>
+            <el-option label="1(全部权限）" value=1></el-option>
+            <el-option label="2(审核)" value=2></el-option>
+            <el-option label="3(搜索发布通告)" value=3></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="状态" required>
           <el-radio-group v-model="admin_form.state">
-            <el-radio border label="1">启用</el-radio>
-            <el-radio border label="0">禁用</el-radio>
+            <el-radio border :label="1">启用</el-radio>
+            <el-radio border :label="0">禁用</el-radio>
           </el-radio-group>
         </el-form-item>
       </el-form>
@@ -155,38 +172,135 @@ export default {
     Search
   },
   data(){
+
     return{
+      loading: true,
+      currentPage: 1,
+      pageSize: 10,
+      total: 0,
       dialogVisible:false,
       search:'',
-      tableData:[
-        {
-          id:'1',
-          registerTime: '2016-05-03',
-          name: 'Tom',
-          state: '启用',
-          pwd: 'LosAngeles',
-          level: '1',
-        }
-      ],
+      tableData:[ ],
       admin_form:{
+        id:'',
         name:'',
         level:'',
         state:'',
       },
     }
   },
+
+  created() {
+    this.load()
+  },
+
   methods:{
+    load(){
+      request.get("/admin",{
+        params:{
+          pageNum: this.currentPage,
+          pageSize: this.pageSize,
+          search: this.search
+
+        }}).then(res => {
+        console.log(res)
+        this.tableData = res.data.records
+        this.total = res.data.total
+      })
+    },
+
     add(){
       this.dialogVisible=true
       this.admin_form={}
     },
-    handleDetail(){},
-    handleEdit(){},
-    save(){
-      request.post("/admin",this.admin_form).then(res=>{
-        console.log(res)
+    handleDetail(id){
+      console.log(id)
+      request.delete("/admin/"+id).then(res=>{
+        if(res.code=='0'){
+          this.$message({
+            type:"success",
+            message:"删除成功"
+          })
+          this.load()
+        }
+        else {
+          this.$message({
+            type:"error",
+            message:"删除失败"
+          })
+        }
       })
+    },
+    handleEdit(row){
+      this.admin_form= JSON.parse(JSON.stringify(row))
+      console.log(this.admin_form)
+      this.dialogVisible=true
+    },
+    save(){
+
+      if(this.admin_form.id){
+        request.put("/admin",this.admin_form).then(res=>{
+          console.log(res)
+          if(res.code=='0'){
+            this.$message({
+              type:"success",
+              message:"更新成功"
+            })
+            this.load()
+            this.dialogVisible=false
+          }
+          else {
+            this.$message({
+              type:"error",
+              message:"更新失败"
+            })
+          }
+        })
+      }
+      else {
+        request.post("/admin",this.admin_form).then(res=>{
+          console.log(res)
+          if(res.code=='0'){
+            this.$message({
+              type:"success",
+              message:"添加成功"
+
+            })
+            this.load()
+            this.dialogVisible=false
+          }
+          else {
+            this.$message({
+              type:"error",
+              message:"添加失败"
+
+            })
+          }
+        })
+      }
+
+    },
+    handleSizeChange(pageSize) {   // 改变当前每页的个数触发
+      this.pageSize = pageSize
+      this.load()
+    },
+    handleCurrentChange(pageNum) {  // 改变当前页码触发
+      this.currentPage = pageNum
+      this.load()
     },
   }
 }
 </script>
+<style scoped>
+
+.el-pagination_Color
+/deep/ .el-pagination__total {
+  color: #ffffff;
+}
+/deep/ .el-pagination__jump {
+  color: #ffffff;
+}
+
+
+
+</style>

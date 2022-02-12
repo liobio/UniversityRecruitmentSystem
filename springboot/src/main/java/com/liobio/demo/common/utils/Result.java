@@ -1,4 +1,4 @@
-package com.liobio.common.utils;
+package com.liobio.demo.common.utils;
 
 /**
  * @author LIOBIO

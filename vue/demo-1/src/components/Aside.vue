@@ -5,7 +5,7 @@
         style="width: 200px;height: 94vh;"
         active-text-color="#fff"
         background-color="#545c64"
-        default-active="2"
+        default-active="1"
         text-color="#fff"
 
     >

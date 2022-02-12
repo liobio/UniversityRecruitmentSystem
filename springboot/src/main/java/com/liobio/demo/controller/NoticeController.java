@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.liobio.demo.entity.NoticeEntity;
 import com.liobio.demo.service.NoticeService;
-import com.liobio.common.utils.PageUtils;
-import com.liobio.common.utils.R;
 
 
 
@@ -33,58 +31,58 @@ public class NoticeController {
 
     /**
      * 列表
-     */
-    @RequestMapping("/list")
-//    @RequiresPermissions("demo:notice:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = noticeService.queryPage(params);
-
-        return R.ok().put("page", page);
-    }
-
-
-    /**
-     * 信息
-     */
-    @RequestMapping("/info/{id}")
-//    @RequiresPermissions("demo:notice:info")
-    public R info(@PathVariable("id") Integer id){
-		NoticeEntity notice = noticeService.getById(id);
-
-        return R.ok().put("notice", notice);
-    }
-
-    /**
-     * 保存
-     */
-    @RequestMapping("/save")
-//    @RequiresPermissions("demo:notice:save")
-    public R save(@RequestBody NoticeEntity notice){
-		noticeService.save(notice);
-
-        return R.ok();
-    }
-
-    /**
-     * 修改
-     */
-    @RequestMapping("/update")
-//    @RequiresPermissions("demo:notice:update")
-    public R update(@RequestBody NoticeEntity notice){
-		noticeService.updateById(notice);
-
-        return R.ok();
-    }
-
-    /**
-     * 删除
-     */
-    @RequestMapping("/delete")
-//    @RequiresPermissions("demo:notice:delete")
-    public R delete(@RequestBody Integer[] ids){
-		noticeService.removeByIds(Arrays.asList(ids));
-
-        return R.ok();
-    }
+//     */
+//    @RequestMapping("/list")
+////    @RequiresPermissions("demo:notice:list")
+//    public R list(@RequestParam Map<String, Object> params){
+//        PageUtils page = noticeService.queryPage(params);
+//
+//        return R.ok().put("page", page);
+//    }
+//
+//
+//    /**
+//     * 信息
+//     */
+//    @RequestMapping("/info/{id}")
+////    @RequiresPermissions("demo:notice:info")
+//    public R info(@PathVariable("id") Integer id){
+//		NoticeEntity notice = noticeService.getById(id);
+//
+//        return R.ok().put("notice", notice);
+//    }
+//
+//    /**
+//     * 保存
+//     */
+//    @RequestMapping("/save")
+////    @RequiresPermissions("demo:notice:save")
+//    public R save(@RequestBody NoticeEntity notice){
+//		noticeService.save(notice);
+//
+//        return R.ok();
+//    }
+//
+//    /**
+//     * 修改
+//     */
+//    @RequestMapping("/update")
+////    @RequiresPermissions("demo:notice:update")
+//    public R update(@RequestBody NoticeEntity notice){
+//		noticeService.updateById(notice);
+//
+//        return R.ok();
+//    }
+//
+//    /**
+//     * 删除
+//     */
+//    @RequestMapping("/delete")
+////    @RequiresPermissions("demo:notice:delete")
+//    public R delete(@RequestBody Integer[] ids){
+//		noticeService.removeByIds(Arrays.asList(ids));
+//
+//        return R.ok();
+//    }
 
 }

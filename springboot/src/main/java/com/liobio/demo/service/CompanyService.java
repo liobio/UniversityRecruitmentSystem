@@ -1,7 +1,7 @@
 package com.liobio.demo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.liobio.common.utils.PageUtils;
+
 import com.liobio.demo.entity.CompanyEntity;
 
 import java.util.Map;
@@ -15,6 +15,6 @@ import java.util.Map;
  */
 public interface CompanyService extends IService<CompanyEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
+
 }
 

@@ -6,9 +6,9 @@
  * 版权所有，侵权必究！
  */
 
-package com.liobio.common.xss;
+package com.liobio.demo.common.xss;
 
-import com.liobio.common.utils.RRException;
+import com.liobio.demo.common.utils.RRException;
 import org.apache.commons.lang.StringUtils;
 
 /**

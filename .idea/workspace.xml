@@ -5,24 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d80a381-41cb-4ce5-875a-8a4ea55412d6" name="Changes" comment="逆向工程初始化">
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/RRException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_hutool_hutool_all_5_7_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_6_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/springboot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/MybatisPlusConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/xss/SQLFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/xss/SQLFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/xss/XssFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/xss/XssHttpServletRequestWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/utils/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/PageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/utils/PageUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/utils/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/RRException.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/utils/RRException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/xss/HTMLFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/xss/HTMLFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/common/xss/SQLFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/xss/SQLFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/SpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/SpringbootApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/AreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/AreaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/DegreeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/DegreeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/EmployerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/EmployerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/MajorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/MajorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/NationalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/NationalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/NativePlaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/NativePlaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/PoliticalAffiliationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/PoliticalAffiliationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/RecruitAndResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/RecruitAndResumeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/RecruitmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/RecruitmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/ResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/ResumeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/UniversityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/UniversityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/dao/AdminDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/entity/AdminEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/entity/AdminEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/AreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/AreaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/DegreeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/DegreeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/EmployerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/EmployerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/JobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/MajorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/MajorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/NationalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/NationalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/NativePlaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/NativePlaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/NoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/PoliticalAffiliationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/PoliticalAffiliationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/RecruitAndResumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/RecruitAndResumeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/RecruitmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/RecruitmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/ResumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/ResumeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/UniversityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/UniversityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/AdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/AreaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/AreaServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/CompanyServiceImpl.java" afterDir="false" />
@@ -39,9 +71,71 @@
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/ResumeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/ResumeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/UniversityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/UniversityServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/springboot/SpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/SpringbootApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/demo/AdminDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/demo/AdminDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/liobio/springboot/SpringbootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/liobio/demo/SpringbootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/liobio/demo/SpringbootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/liobio/demo/SpringbootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/Constant$CloudService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/Constant$MenuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/Constant$ScheduleStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/MybatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/PageUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/RRException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/utils/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/xss/HTMLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/common/xss/SQLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/SpringbootApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/SpringbootApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/AreaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/AreaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/DegreeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/DegreeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/EmployerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/EmployerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/JobController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/JobController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/MajorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/MajorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/NationalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/NationalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/NativePlaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/NativePlaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/NoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/PoliticalAffiliationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/PoliticalAffiliationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/RecruitAndResumeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/RecruitAndResumeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/RecruitmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/RecruitmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/ResumeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/ResumeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/UniversityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/UniversityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/entity/AdminEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/entity/AdminEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/AreaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/AreaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/CompanyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/DegreeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/DegreeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/EmployerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/EmployerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/JobService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/JobService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/MajorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/MajorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/NationalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/NationalService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/NativePlaceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/NativePlaceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/NoticeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/NoticeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/PoliticalAffiliationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/PoliticalAffiliationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/RecruitAndResumeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/RecruitAndResumeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/RecruitmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/RecruitmentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/ResumeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/ResumeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/UniversityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/UniversityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/AreaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/AreaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/CompanyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/CompanyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/DegreeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/DegreeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/EmployerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/EmployerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/JobServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/JobServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/MajorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/MajorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/NationalServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/NationalServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/NativePlaceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/NativePlaceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/NoticeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/NoticeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/PoliticalAffiliationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/PoliticalAffiliationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/RecruitAndResumeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/RecruitAndResumeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/RecruitmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/RecruitmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/ResumeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/ResumeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/UniversityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/UniversityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +191,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vue/demo-1/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="D:\IntelliJ IDEA\IntelliJ IDEA 2021.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -105,6 +199,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UniversityRecruitmentSystem\springboot\src\main\java\com\liobio\demo" />
       <recent name="D:\UniversityRecruitmentSystem\vue\demo-1\src\components" />
       <recent name="D:\UniversityRecruitmentSystem\vue\demo-1\src\views" />
       <recent name="D:\UniversityRecruitmentSystem\springboot\src\main\java\com\liobio\common\utils" />
@@ -199,7 +294,9 @@
       <workItem from="1643377509992" duration="18487000" />
       <workItem from="1643516095620" duration="6323000" />
       <workItem from="1644204977924" duration="24068000" />
-      <workItem from="1644248148603" duration="6284000" />
+      <workItem from="1644248148603" duration="10868000" />
+      <workItem from="1644492295631" duration="6079000" />
+      <workItem from="1644582199926" duration="31256000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1642390352770</created>
@@ -242,11 +339,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/NoticeController.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/MajorController.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.liobio.demo.service.impl.AdminServiceImpl$$EnhancerBySpringCGLIB$$d94af536" memberName="mapperClass" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

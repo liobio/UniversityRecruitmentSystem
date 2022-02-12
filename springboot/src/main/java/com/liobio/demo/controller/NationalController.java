@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.liobio.demo.entity.NationalEntity;
 import com.liobio.demo.service.NationalService;
-import com.liobio.common.utils.PageUtils;
-import com.liobio.common.utils.R;
-
 
 
 /**
@@ -34,57 +31,57 @@ public class NationalController {
     /**
      * 列表
      */
-    @RequestMapping("/list")
-//    @RequiresPermissions("demo:national:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = nationalService.queryPage(params);
-
-        return R.ok().put("page", page);
-    }
-
-
-    /**
-     * 信息
-     */
-    @RequestMapping("/info/{id}")
-//    @RequiresPermissions("demo:national:info")
-    public R info(@PathVariable("id") Integer id){
-		NationalEntity national = nationalService.getById(id);
-
-        return R.ok().put("national", national);
-    }
-
-    /**
-     * 保存
-     */
-    @RequestMapping("/save")
-//    @RequiresPermissions("demo:national:save")
-    public R save(@RequestBody NationalEntity national){
-		nationalService.save(national);
-
-        return R.ok();
-    }
-
-    /**
-     * 修改
-     */
-    @RequestMapping("/update")
-//    @RequiresPermissions("demo:national:update")
-    public R update(@RequestBody NationalEntity national){
-		nationalService.updateById(national);
-
-        return R.ok();
-    }
-
-    /**
-     * 删除
-     */
-    @RequestMapping("/delete")
-//    @RequiresPermissions("demo:national:delete")
-    public R delete(@RequestBody Integer[] ids){
-		nationalService.removeByIds(Arrays.asList(ids));
-
-        return R.ok();
-    }
+//    @RequestMapping("/list")
+////    @RequiresPermissions("demo:national:list")
+//    public R list(@RequestParam Map<String, Object> params){
+//        PageUtils page = nationalService.queryPage(params);
+//
+//        return R.ok().put("page", page);
+//    }
+//
+//
+//    /**
+//     * 信息
+//     */
+//    @RequestMapping("/info/{id}")
+////    @RequiresPermissions("demo:national:info")
+//    public R info(@PathVariable("id") Integer id){
+//		NationalEntity national = nationalService.getById(id);
+//
+//        return R.ok().put("national", national);
+//    }
+//
+//    /**
+//     * 保存
+//     */
+//    @RequestMapping("/save")
+////    @RequiresPermissions("demo:national:save")
+//    public R save(@RequestBody NationalEntity national){
+//		nationalService.save(national);
+//
+//        return R.ok();
+//    }
+//
+//    /**
+//     * 修改
+//     */
+//    @RequestMapping("/update")
+////    @RequiresPermissions("demo:national:update")
+//    public R update(@RequestBody NationalEntity national){
+//		nationalService.updateById(national);
+//
+//        return R.ok();
+//    }
+//
+//    /**
+//     * 删除
+//     */
+//    @RequestMapping("/delete")
+////    @RequiresPermissions("demo:national:delete")
+//    public R delete(@RequestBody Integer[] ids){
+//		nationalService.removeByIds(Arrays.asList(ids));
+//
+//        return R.ok();
+//    }
 
 }
