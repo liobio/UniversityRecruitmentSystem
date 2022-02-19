@@ -24,10 +24,22 @@ public class AdminServiceImpl extends ServiceImpl<AdminDao, AdminEntity> impleme
         entity.setRegisterTime(new Date());
         return super.save(entity);
     }
+    @Override
+    public boolean login(AdminEntity entity){
+        AdminEntity res=this.getBaseMapper().selectOne(Wrappers.<AdminEntity>lambdaQuery()
+                .eq(AdminEntity::getName,entity.getName())
+                .eq(AdminEntity::getPwd,entity.getPwd()));
+        if(res == null){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
-    public boolean deleteById(long id){
-        super.baseMapper.deleteById(id);
-        return true;
+    public int deleteById(long id){
+
+        return this.getBaseMapper().deleteById(id);
     }
     @Override
     public Page<AdminEntity> findPage(Integer pageNum, Integer pageSize, String search){
@@ -37,7 +49,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminDao, AdminEntity> impleme
             wrapper.like(AdminEntity::getName, search);
         }
 
-        Page<AdminEntity> adminPage = super.baseMapper.selectPage(new Page<>(pageNum,pageSize),wrapper);
+        Page<AdminEntity> adminPage = this.getBaseMapper().selectPage(new Page<>(pageNum,pageSize),wrapper);
         return adminPage;
 
     }

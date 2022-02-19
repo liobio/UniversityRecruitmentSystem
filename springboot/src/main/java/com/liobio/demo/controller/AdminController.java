@@ -30,6 +30,18 @@ public class AdminController {
         return Result.success();
     }
     /**
+     * 登录
+     */
+    @PostMapping("/login")
+    public Result<?> login(@RequestBody AdminEntity admin){
+        if(adminService.login(admin)==true){
+            return Result.success();
+        }
+        else{
+            return Result.error("-1","用户或密码错误");
+        }
+    }
+    /**
      *  更新
      */
     @PutMapping
@@ -38,7 +50,7 @@ public class AdminController {
         return Result.success();
     }
     /**
-     *
+     * 删除
      */
     @DeleteMapping("/{id}")
     public Result<?> delete(@PathVariable Integer id) {

@@ -16,6 +16,8 @@ import com.liobio.demo.entity.AdminEntity;
 public interface AdminService extends IService<AdminEntity> {
     Page<AdminEntity> findPage(Integer pageNum, Integer pageSize, String search);
 
-    public boolean deleteById(long  id);
+    int deleteById(long  id);
+
+    boolean login(AdminEntity entity);
 }
 
