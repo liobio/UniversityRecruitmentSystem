@@ -16,5 +16,6 @@ import java.util.Map;
  */
 public interface UserService extends IService<UserEntity> {
     Page<UserEntity> findPage(Integer pageNum, Integer pageSize, String search);
+    int deleteById(long  id);
 }
 

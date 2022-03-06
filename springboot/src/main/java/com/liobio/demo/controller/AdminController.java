@@ -1,7 +1,10 @@
 package com.liobio.demo.controller;
 
 
+import cn.hutool.core.util.StrUtil;
+import com.liobio.demo.common.utils.Constants;
 import com.liobio.demo.common.utils.Result;
+import com.liobio.demo.controller.dto.AdminDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.liobio.demo.entity.AdminEntity;
@@ -24,8 +27,8 @@ public class AdminController {
     /**
      * 保存
      */
-    @PostMapping()
-    public Result<?> save(@RequestBody AdminEntity admin){
+    @PostMapping("/admin_info")
+    public Result adminSave(@RequestBody AdminEntity admin){
         adminService.save(admin);
         return Result.success();
     }
@@ -33,84 +36,43 @@ public class AdminController {
      * 登录
      */
     @PostMapping("/login")
-    public Result<?> login(@RequestBody AdminEntity admin){
-        if(adminService.login(admin)==true){
-            return Result.success();
+    public Result login(@RequestBody AdminDTO adminDTO){
+        String name = adminDTO.getName();
+        String pwd = adminDTO.getPwd();
+        if (StrUtil.isBlank(name) || StrUtil.isBlank(pwd)) {
+            return Result.error(Constants.CODE_400, "参数错误");
         }
-        else{
-            return Result.error("-1","用户或密码错误");
-        }
+
+        return Result.success(adminService.login(adminDTO));
+
     }
     /**
      *  更新
      */
-    @PutMapping
-    public Result<?> update(@RequestBody AdminEntity admin) {
+    @PutMapping("/admin_info")
+    public Result adminUpdate(@RequestBody AdminEntity admin) {
         adminService.updateById(admin);
         return Result.success();
     }
     /**
      * 删除
      */
-    @DeleteMapping("/{id}")
-    public Result<?> delete(@PathVariable Integer id) {
+    @DeleteMapping("/admin_info/{id}")
+    public Result adminDelete(@PathVariable Integer id) {
         adminService.deleteById(id);
         return Result.success();
     }
     /**
      * 分页查询
      */
-    @GetMapping
-    public Result<?> findAdminPage(@RequestParam(defaultValue = "1") Integer pageNum,
+    @GetMapping("/admin_info")
+    public Result findAdminPage(@RequestParam(defaultValue = "1") Integer pageNum,
                                    @RequestParam(defaultValue = "20") Integer pageSize,
                                    @RequestParam(defaultValue = "") String search) {
         return Result.success(adminService.findPage(pageNum, pageSize, search));
     }
 
 
-
-
-    /**
-     * 列表
-     */
-//    @RequestMapping("/list")
-//    public R list(@RequestParam Map<String, Object> params){
-//        PageUtils page = adminService.queryPage(params);
-//
-//        return R.ok().put("page", page);
-//    }
-//
-//
-//    /**
-//     * 信息
-//     */
-//    @RequestMapping("/info/{id}")
-//    public R info(@PathVariable("id") Integer id){
-//		AdminEntity admin = adminService.getById(id);
-//
-//        return R.ok().put("admin", admin);
-//    }
-//
-//
-//    /**
-//     * 修改
-//     */
-//    @RequestMapping("/update")
-//    public R update(@RequestBody AdminEntity admin){
-//		adminService.updateById(admin);
-//
-//        return R.ok();
-//    }
-//
-//    /**
-//     * 删除
-//     */
-//    @RequestMapping("/delete")
-//    public R delete(@RequestBody Integer[] ids){
-//		adminService.removeByIds(Arrays.asList(ids));
-//
-//        return R.ok();
-//    }
 
 }
 

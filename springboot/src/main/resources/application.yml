@@ -1,4 +1,5 @@
 server:
+  ip: localhost
   port: 2022
 spring:
   datasource:
@@ -11,3 +12,7 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+
+files:
+  upload:
+    path: C:/Users/LIOBIO/Pictures/DemoPicture/

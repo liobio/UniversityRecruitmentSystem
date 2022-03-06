@@ -3,12 +3,9 @@ package com.liobio.demo.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
 import com.liobio.demo.common.utils.Result;
-import com.liobio.demo.entity.AdminEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import com.liobio.demo.entity.UserEntity;
 import com.liobio.demo.service.UserService;
 
@@ -22,7 +19,7 @@ import com.liobio.demo.service.UserService;
  * @date 2022-01-27 23:20:58
  */
 @RestController
-@RequestMapping("demo/user")
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -30,24 +27,32 @@ public class UserController {
     /**
      * 保存
      */
-    @PostMapping()
-    public Result<?> save(@RequestBody UserEntity user){
+    @PostMapping("/user_info")
+    public Result userSave(@RequestBody UserEntity user){
         userService.save(user);
         return Result.success();
     }
     /**
      *  更新
      */
-    @PutMapping
-    public Result<?> update(@RequestBody UserEntity user) {
+    @PutMapping("/user_info")
+    public Result userUpdate(@RequestBody UserEntity user) {
         userService.updateById(user);
+        return Result.success();
+    }
+    /**
+     * 删除
+     */
+    @DeleteMapping("/user_info/{id}")
+    public Result userDelete(@PathVariable Integer id) {
+        userService.deleteById(id);
         return Result.success();
     }
     /**
      * 分页查询
      */
-    @GetMapping
-    public Result<?> findAdminPage(@RequestParam(defaultValue = "1") Integer pageNum,
+    @GetMapping("/user_info")
+    public Result findUserPage(@RequestParam(defaultValue = "1") Integer pageNum,
                                    @RequestParam(defaultValue = "20") Integer pageSize,
                                    @RequestParam(defaultValue = "") String search) {
         return Result.success(userService.findPage(pageNum, pageSize, search));

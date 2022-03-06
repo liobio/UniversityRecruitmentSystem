@@ -2,6 +2,8 @@ package com.liobio.demo.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.liobio.demo.common.utils.Result;
+import com.liobio.demo.controller.dto.AdminDTO;
 import com.liobio.demo.entity.AdminEntity;
 
 
@@ -18,6 +20,6 @@ public interface AdminService extends IService<AdminEntity> {
 
     int deleteById(long  id);
 
-    boolean login(AdminEntity entity);
+    AdminDTO login(AdminDTO entity);
 }
 

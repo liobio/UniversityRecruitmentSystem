@@ -33,6 +33,9 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         Page<UserEntity> UserPage = super.baseMapper.selectPage(new Page<>(pageNum, pageSize), wrapper);
         return UserPage;
     }
+    public int deleteById(long id){
+        return this.getBaseMapper().deleteById(id);
+    }
 
 
 
