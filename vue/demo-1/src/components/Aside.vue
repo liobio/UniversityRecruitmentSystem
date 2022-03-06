@@ -1,34 +1,46 @@
 <template>
   <div>
     <el-menu
-
-        style="width: 200px;height: 94vh;"
+        style="width: 200px;height: 94vh;position:relative"
         active-text-color="#fff"
         background-color="#545c64"
-        default-active="1"
+        :default-active=$route.path.substr(7)
         text-color="#fff"
-
+        router
     >
-      <el-menu-item index="1">
-          <el-icon><avatar /></el-icon>
-          <span>管理员</span>
+      <el-menu-item index="admin_home">
+        <el-icon><home-filled/></el-icon>
+        <span>首页</span>
       </el-menu-item>
-      <el-sub-menu index="2">
+      <el-menu-item index="admin_info">
+          <el-icon><avatar /></el-icon>
+          <span>管理员管理</span>
+      </el-menu-item>
+
+      <el-sub-menu index="company">
         <template #title>
           <el-icon><school /></el-icon>
           <span>企业管理</span>
         </template>
-        <el-menu-item index="2-1">企业审核</el-menu-item>
-        <el-menu-item index="2-2">企业信息</el-menu-item>
+        <el-menu-item index="audit">企业审核</el-menu-item>
+        <el-menu-item index="info">企业信息</el-menu-item>
       </el-sub-menu>
-      <el-menu-item index="3" >
+      <el-menu-item index="hr_info" >
         <el-icon><user-filled/></el-icon>
-        <span>人事管理人员</span>
+        <span>HR管理</span>
       </el-menu-item>
-      <el-menu-item index="4">
+      <el-menu-item index="user_info">
         <el-icon><user /></el-icon>
-        <span>用户</span>
+        <span>用户管理</span>
       </el-menu-item>
+      <el-sub-menu >
+        <template #title>
+          <el-icon><info-filled/></el-icon>
+          <span>字典管理</span>
+        </template>
+        <el-menu-item index="area_info">区域信息</el-menu-item>
+        <el-menu-item index="native_place">籍贯信息</el-menu-item>
+      </el-sub-menu>
     </el-menu>
   </div>
 </template>
@@ -40,12 +52,18 @@ import {
   School,
   UserFilled,
   User,
+  HomeFilled,
+  InfoFilled,
 } from '@element-plus/icons-vue'
+
 
 export default {
   name: "Aside",
   components:{
-    Avatar,School,UserFilled,User
+    Avatar,School,UserFilled,User,HomeFilled,InfoFilled
+  },
+  created() {
+    console.log(this.$route.path)
   }
 }
 </script>

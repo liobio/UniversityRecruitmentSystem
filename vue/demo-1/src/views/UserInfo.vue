@@ -1,12 +1,12 @@
 <template>
   <div style="background: #545c64; width: 100vh " >
-<!--    功能区域-->
+    <!--    功能区域-->
     <div style="margin: 5px 10px ">
       <el-button type="primary" @click="add">新增</el-button>
-<!--      <el-button type="primary">导入</el-button>-->
-<!--      <el-button type="primary">导出</el-button>-->
+      <!--      <el-button type="primary">导入</el-button>-->
+      <!--      <el-button type="primary">导出</el-button>-->
     </div>
-<!--    搜索区域-->
+    <!--    搜索区域-->
     <div style="margin: 5px 10px" >
       <el-input v-model="search" placeholder="Please input" clearable style="width: 40vh">
         <template #append >
@@ -19,11 +19,12 @@
         </template>
       </el-input>
     </div>
-<!--    主体-->
+    <!--    主体-->
 
     <el-table
         :data="tableData"
         border
+        max-height="700"
         stripe
         style="width:99%;margin: 10px">
       <el-table-column
@@ -45,34 +46,38 @@
           prop="name"
           header-align="center"
           align="left"
-
           sortable
           label="姓名"
       >
       </el-table-column>
+<!--      <el-table-column-->
+<!--          prop="pwd"-->
+<!--          header-align="center"-->
+<!--          align="left"-->
+<!--          sortable-->
+<!--          label="密码"-->
+<!--      >-->
+<!--      </el-table-column>-->
       <el-table-column
-          prop="pwd"
+          prop="tel"
           header-align="center"
-          align="left"
-
           sortable
-          label="密码"
+          align="center"
+          label="电话号码"
       >
       </el-table-column>
       <el-table-column
-          prop="level"
+          prop="email"
           header-align="center"
-          width="120"
           sortable
-          align="center"
-          label="管理员等级"
+          align="left"
+          label="电子邮箱"
       >
       </el-table-column>
       <el-table-column
           prop="registerTime"
           header-align="center"
           align="center"
-
           sortable
           label="注册时间"
       >
@@ -84,6 +89,7 @@
           width="80"
           sortable
           label="状态"
+          :formatter="stateFormat"
       >
       </el-table-column>
       <el-table-column
@@ -104,50 +110,44 @@
         </template>
       </el-table-column>
     </el-table>
-<!--    分页-->
+    <!--    分页-->
     <div style="margin: 10px 0;text-align: center">
-<!--      <el-pagination-->
-<!--          background-->
-<!--          layout="prev, pager, next"-->
-<!--          :total="1000"-->
-<!--          :hide-on-single-page="true">-->
-<!--      </el-pagination>-->
+
       <el-pagination class="el-pagination_Color"
-          background
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          :current-page="currentPage"
-          :page-sizes="[10, 20, 50]"
-          :page-size="pageSize"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="total"
+                     background
+                     @size-change="handleSizeChange"
+                     @current-change="handleCurrentChange"
+                     :current-page="currentPage"
+                     :page-sizes="[10, 20, 50]"
+                     :page-size="pageSize"
+                     layout="total, sizes, prev, pager, next, jumper"
+                     :total="total"
 
       >
       </el-pagination>
 
     </div>
-<!--    对话框-->
+    <!--    对话框-->
     <el-dialog
         v-model="dialogVisible"
         title="增加管理员"
         width="30%"
     >
-      <el-form :inline="true" :model="admin_form" label-width="120px">
+      <el-form :inline="true" :model="user_form" label-width="120px">
         <el-form-item label="姓名" required>
-          <el-input v-model="admin_form.name"></el-input>
+          <el-input v-model="user_form.name"></el-input>
         </el-form-item>
-        <el-form-item label="管理员等级" required>
-          <el-select
-              v-model="admin_form.level"
-              placeholder="please select level"
-          >
-            <el-option label="1(全部权限）" value=1></el-option>
-            <el-option label="2(审核)" value=2></el-option>
-            <el-option label="3(搜索发布通告)" value=3></el-option>
-          </el-select>
+<!--        <el-form-item label="密码" required>-->
+<!--          <el-input v-model="user_form.pwd"></el-input>-->
+<!--        </el-form-item>-->
+        <el-form-item label="电话号码" required>
+          <el-input v-model="user_form.tel"></el-input>
+        </el-form-item>
+        <el-form-item label="电子邮箱" required>
+          <el-input v-model="user_form.email"></el-input>
         </el-form-item>
         <el-form-item label="状态" required>
-          <el-radio-group v-model="admin_form.state">
+          <el-radio-group v-model="user_form.state">
             <el-radio border :label="1">启用</el-radio>
             <el-radio border :label="0">禁用</el-radio>
           </el-radio-group>
@@ -162,12 +162,14 @@
   </div>
 </template>
 
-<script>
-
 import { Search } from "@element-plus/icons";
 import request from "../utils/request";
+<script>
+import {Search} from "@element-plus/icons";
+import request from "../utils/request";
+
 export default {
-  name: "Admin",
+  name: "UserInfo",
   components: {
     Search
   },
@@ -181,10 +183,12 @@ export default {
       dialogVisible:false,
       search:'',
       tableData:[ ],
-      admin_form:{
+      user_form:{
         id:'',
         name:'',
-        level:'',
+        pwd:'',
+        tel:'',
+        email:'',
         state:'',
       },
     }
@@ -196,14 +200,14 @@ export default {
 
   methods:{
     load(){
-      request.get("/admin",{
+      request.get("/user/user_info",{
         params:{
           pageNum: this.currentPage,
           pageSize: this.pageSize,
           search: this.search
 
         }}).then(res => {
-        console.log(res)
+        // console.log(res)
         this.tableData = res.data.records
         this.total = res.data.total
       })
@@ -211,12 +215,12 @@ export default {
 
     add(){
       this.dialogVisible=true
-      this.admin_form={}
+      this.user_form={}
     },
     handleDetail(id){
-      console.log(id)
-      request.delete("/admin/"+id).then(res=>{
-        if(res.code=='0'){
+      // console.log(id)
+      request.delete("/user/user_info/"+id).then(res=>{
+        if(res.code=='200'){
           this.$message({
             type:"success",
             message:"删除成功"
@@ -232,16 +236,20 @@ export default {
       })
     },
     handleEdit(row){
-      this.admin_form= JSON.parse(JSON.stringify(row))
-      console.log(this.admin_form)
+      this.user_form= JSON.parse(JSON.stringify(row))
+      // console.log(this.user_form)
       this.dialogVisible=true
+    },
+    stateFormat(row){
+      // console.log(row.state)
+      return row.state=='1'?'启用':'禁用';
     },
     save(){
 
-      if(this.admin_form.id){
-        request.put("/admin",this.admin_form).then(res=>{
-          console.log(res)
-          if(res.code=='0'){
+      if(this.user_form.id){
+        request.put("/user/user_info",this.user_form).then(res=>{
+          // console.log(res)
+          if(res.code=='200'){
             this.$message({
               type:"success",
               message:"更新成功"
@@ -258,9 +266,9 @@ export default {
         })
       }
       else {
-        request.post("/admin",this.admin_form).then(res=>{
-          console.log(res)
-          if(res.code=='0'){
+        request.post("/user/user_info",this.user_form).then(res=>{
+          // console.log(res)
+          if(res.code=='200'){
             this.$message({
               type:"success",
               message:"添加成功"
@@ -289,8 +297,11 @@ export default {
       this.load()
     },
   }
+
+
 }
 </script>
+
 <style scoped>
 
 .el-pagination_Color
@@ -300,7 +311,5 @@ export default {
 /deep/ .el-pagination__jump {
   color: #ffffff;
 }
-
-
 
 </style>

@@ -65,17 +65,20 @@ export default {
   methods:{
     login(){
       request.post("/admin/login",this.form).then(res => {
-        if(res.code=='0'){
+        if(res.code === '200'){
           this.$message({
             type:"success",
             message:"登录成功"
           })
+          localStorage.setItem("admin",JSON.stringify((res.data)))
+          // console.log(res)
           this.$router.push("/admin")
         }
         else {
           this.$message({
             type:"error",
-            message:"登录失败"
+            message:res.msg
+
           })
         }
       })
