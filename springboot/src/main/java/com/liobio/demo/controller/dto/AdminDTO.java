@@ -16,6 +16,7 @@ public class AdminDTO {
     private Integer id;
     private String name;
     private String pwd;
+    private Integer level;
     private String avatarUrl;
     private String token;
 }

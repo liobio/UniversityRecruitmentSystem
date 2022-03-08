@@ -4,10 +4,8 @@ import AdminLogin from '../views/AdminLogin.vue'
 import AdminInfo from "../views/AdminInfo";
 import UserInfo from "../views/UserInfo";
 import AdminHome from "../views/AdminHome";
-import AccountInfo from "../views/PersonalInfo";
-import PersonalInfo from "../views/PersonalInfo";
-import DictionaryInfo from "../views/DictionaryInfo";
 import AreaInfo from "../views/AreaInfo";
+import FilesInfo from "../views/FilesInfo";
 
 
 const routes = [
@@ -38,9 +36,9 @@ const routes = [
         component: UserInfo
       },
       {
-        path:'dictionary_info',
-        name: 'DictionaryInfo',
-        component: DictionaryInfo,
+        path: 'files_info',
+        name: 'FilesInfo',
+        component: FilesInfo
       },
       {
         path:'area_info',

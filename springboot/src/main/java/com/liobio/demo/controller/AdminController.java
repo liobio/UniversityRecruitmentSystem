@@ -5,6 +5,7 @@ import cn.hutool.core.util.StrUtil;
 import com.liobio.demo.common.utils.Constants;
 import com.liobio.demo.common.utils.Result;
 import com.liobio.demo.controller.dto.AdminDTO;
+import com.liobio.demo.exception.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.liobio.demo.entity.AdminEntity;
@@ -67,7 +68,7 @@ public class AdminController {
      */
     @GetMapping("/admin_info")
     public Result findAdminPage(@RequestParam(defaultValue = "1") Integer pageNum,
-                                   @RequestParam(defaultValue = "20") Integer pageSize,
+                                   @RequestParam(defaultValue = "10") Integer pageSize,
                                    @RequestParam(defaultValue = "") String search) {
         return Result.success(adminService.findPage(pageNum, pageSize, search));
     }

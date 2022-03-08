@@ -46,17 +46,20 @@ public class AdminServiceImpl extends ServiceImpl<AdminDao, AdminEntity> impleme
 //            return res;
 //        }
         AdminEntity one = getAdminInfo(DTO);
+        if(one.getState()==0){
+            throw new ServiceException(Constants.CODE_600, "该账号已被禁用");
+        }
         if (one != null) {
             BeanUtil.copyProperties(one, DTO, true);
             // 设置token
             String token = Token.genToken(one.getId().toString(), one.getPwd());
             DTO.setToken(token);
-            System.out.println(one.getAvatarUrl());
             DTO.setAvatarUrl(one.getAvatarUrl());
-//            Integer level= one.getLevel(); // ROLE_ADMIN
-            // 设置用户的菜单列表
+            Integer level= one.getLevel();
+            DTO.setLevel(level);
+//
 //            List<Menu> roleMenus = getRoleMenus(role);
-//            userDTO.setMenus(roleMenus);
+//            AminDTO.setMenus(roleMenus);
             return DTO;
         } else {
             throw new ServiceException(Constants.CODE_600, "用户名或密码错误");

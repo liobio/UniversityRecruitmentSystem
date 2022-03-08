@@ -33,7 +33,11 @@
         <el-icon><user /></el-icon>
         <span>用户管理</span>
       </el-menu-item>
-      <el-sub-menu >
+      <el-menu-item index="files_info">
+        <el-icon><user /></el-icon>
+        <span>文件管理</span>
+      </el-menu-item>
+      <el-sub-menu index="dic">
         <template #title>
           <el-icon><info-filled/></el-icon>
           <span>字典管理</span>

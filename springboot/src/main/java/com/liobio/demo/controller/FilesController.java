@@ -5,8 +5,12 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.liobio.demo.common.utils.Result;
+import com.liobio.demo.entity.AdminEntity;
 import com.liobio.demo.entity.FilesEntity;
 import com.liobio.demo.service.FilesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -28,8 +32,8 @@ import java.util.List;
  * @Description
  */
 @RestController
-@RequestMapping("/file")
-public class FileController {
+@RequestMapping("/files")
+public class FilesController {
 
 
     @Value("${files.upload.path}")
@@ -41,7 +45,7 @@ public class FileController {
     @Value("${server.port}")
     private String serverPort;
 
-    @Resource
+    @Autowired
     private FilesService filesService;
     /**
      * 文件上传接口
@@ -77,7 +81,7 @@ public class FileController {
         } else {
             //  不存在就上传文件到磁盘
             file.transferTo(uploadFile);
-            url = "http://" + serverIp + ":"+serverPort+"/file/" + fileUUID;
+            url = "http://" + serverIp + ":"+serverPort+"/files/" + fileUUID;
         }
 
 
@@ -113,7 +117,27 @@ public class FileController {
         os.flush();
         os.close();
     }
-
+    @PutMapping("/info")
+    public Result filesUpdate(@RequestBody FilesEntity filesEntity) {
+        filesService.updateById(filesEntity);
+        return Result.success();
+    }
+    @DeleteMapping("/{id}")
+    public Result filesDelete(@PathVariable Integer id) {
+        filesService.deleteById(id);
+        return Result.success();
+    }
+    @PostMapping("/del_batch")
+    public Result deleteBatch(@RequestBody List<Integer> ids) {
+        filesService.deleteBatch(ids);
+        return Result.success();
+    }
+    @GetMapping("/info")
+    public Result findFilesPage(@RequestParam(defaultValue = "1") Integer pageNum,
+                                @RequestParam(defaultValue = "10") Integer pageSize,
+                                @RequestParam(defaultValue = "") String search) {
+        return Result.success(filesService.findPage(pageNum, pageSize, search));
+    }
 
     /**
      * 通过文件的md5查询文件
@@ -127,5 +151,6 @@ public class FileController {
         List<FilesEntity> filesList = filesService.list(queryWrapper);
         return filesList.size() == 0 ? null : filesList.get(0);
     }
+
 
 }

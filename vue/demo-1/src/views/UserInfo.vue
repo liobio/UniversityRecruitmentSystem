@@ -3,8 +3,6 @@
     <!--    功能区域-->
     <div style="margin: 5px 10px ">
       <el-button type="primary" @click="add">新增</el-button>
-      <!--      <el-button type="primary">导入</el-button>-->
-      <!--      <el-button type="primary">导出</el-button>-->
     </div>
     <!--    搜索区域-->
     <div style="margin: 5px 10px" >
@@ -112,7 +110,6 @@
     </el-table>
     <!--    分页-->
     <div style="margin: 10px 0;text-align: center">
-
       <el-pagination class="el-pagination_Color"
                      background
                      @size-change="handleSizeChange"
@@ -125,7 +122,6 @@
 
       >
       </el-pagination>
-
     </div>
     <!--    对话框-->
     <el-dialog
