@@ -5,23 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d80a381-41cb-4ce5-875a-8a4ea55412d6" name="Changes" comment="添加部分菜单功能">
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/config/TokenWhiteListConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/springboot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/config/InterceptorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/utils/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/common/utils/JwtInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/FilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/dto/AdminDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/dto/AdminDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/FilesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/FilesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/FilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/FilesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/entity/AdminEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/entity/AdminEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/FilesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/service/impl/FilesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/common/config/InterceptorConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/common/config/InterceptorConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/common/utils/JwtInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/common/utils/JwtInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/FileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/dto/AdminDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/dto/AdminDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/FilesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/FilesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/FilesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/controller/FilesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/entity/AdminEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/entity/AdminEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/AdminServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/FilesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/com/liobio/demo/service/impl/FilesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/target/classes/mapper/demo/FilesDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/target/classes/mapper/demo/FilesDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +33,8 @@
       <list>
         <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Vue Single File Component" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -82,7 +82,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot/src/main/resources/mapper/demo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
     <property name="ts.external.directory.path" value="D:\IntelliJ IDEA\IntelliJ IDEA 2021.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -174,6 +174,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4d80a381-41cb-4ce5-875a-8a4ea55412d6" name="Changes" comment="" />
@@ -197,7 +200,7 @@
       <workItem from="1646397852522" duration="8857000" />
       <workItem from="1646486050290" duration="14653000" />
       <workItem from="1646547798944" duration="19435000" />
-      <workItem from="1646631094288" duration="22411000" />
+      <workItem from="1646631094288" duration="37954000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project">
       <created>1642390352770</created>
@@ -253,6 +256,14 @@
           <line>5</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/springboot/src/main/java/com/liobio/demo/controller/AdminController.java</url>
+          <line>68</line>
+          <properties class="com.liobio.demo.controller.AdminController" method="findAdminPage">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -260,5 +271,9 @@
         <PinnedItemInfo parentTag="com.liobio.demo.service.impl.AdminServiceImpl$$EnhancerBySpringCGLIB$$d94af536" memberName="mapperClass" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

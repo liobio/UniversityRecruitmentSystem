@@ -2,8 +2,12 @@
   <div style="background: #545c64; width: 100vh " >
     <!--    功能区域-->
     <div style="margin: 5px 10px ">
-      <el-upload :action="'/api/files/upload'" :show-file-list="false"
-                 :on-success="handleFileUploadSuccess" style="display: inline-block">
+      <el-upload :action="'/api/files/upload'"
+                 :show-file-list="false"
+                 :on-progress="fileOnUpload"
+                 :on-success="handleFileUploadSuccess"
+                 :headers="myHeaders"
+                 style="display: inline-block">
         <el-button type="primary" class="ml-5">上传文件 <el-icon><Top/></el-icon></el-button>
       </el-upload>
 
@@ -133,11 +137,14 @@
 
 
 <script>
+const adminJson = localStorage.getItem("admin") ? JSON.parse(localStorage.getItem("admin")) : null;
+const token=adminJson.token;
 import {serverIp, serverPort} from "../../public/config";
 import Search from "@element-plus/icons/lib/Search";
 import request from "../utils/request";
 import Top from "@element-plus/icons/lib/Top";
 import Delete from "@element-plus/icons/lib/Delete";
+import {Base64} from "js-base64";
 
 export default {
   name: "FileInfo",
@@ -158,6 +165,7 @@ export default {
       total: 0,
       search:'',
       tableData:[ ],
+      myHeaders: {token: token}
 
     }
   },
@@ -224,16 +232,27 @@ export default {
       this.search = ""
       this.load()
     },
-    handleFileUploadSuccess(res) {
-      console.log(res)
-      this.$message.success("上传成功")
-      this.load()
+    fileOnUpload(){
+      console.log('文件上传中  '+token)
+    },
+    handleFileUploadSuccess(params) {
+      console.log('success:'+params.code)
+      if(params.code=='200'){
+        this.$message.success("上传成功")
+        this.load()
+      }else {
+        this.$message.error('上传失败')
+      }
+
+
     },
     download(url) {
       window.open(url)
     },
     preview(url) {
-      window.open('https://file.keking.cn/onlinePreview?url=' + encodeURIComponent(window.btoa((url))))
+      let preview_url = 'http://tool.liobio.cn/onlinePreview?url=' + encodeURIComponent(Base64.encode(url))
+      console.log(preview_url)
+      window.open(preview_url)
     },
     handleSizeChange(pageSize) {   // 改变当前每页的个数触发
       this.pageSize = pageSize

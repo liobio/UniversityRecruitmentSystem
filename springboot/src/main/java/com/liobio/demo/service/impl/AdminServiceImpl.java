@@ -36,17 +36,9 @@ public class AdminServiceImpl extends ServiceImpl<AdminDao, AdminEntity> impleme
     }
     @Override
     public AdminDTO login(AdminDTO DTO){
-//        AdminDTO res=this.getBaseMapper().selectOne(Wrappers.<AdminEntity>lambdaQuery()
-//                .eq(AdminEntity::getName,entity.getName())
-//                .eq(AdminEntity::getPwd,entity.getPwd()));
-//        if(res == null){
-//            return null;
-//        }
-//        else {
-//            return res;
-//        }
         AdminEntity one = getAdminInfo(DTO);
-        if(one.getState()==0){
+        if(one.isState()==false){
+
             throw new ServiceException(Constants.CODE_600, "该账号已被禁用");
         }
         if (one != null) {
@@ -57,7 +49,6 @@ public class AdminServiceImpl extends ServiceImpl<AdminDao, AdminEntity> impleme
             DTO.setAvatarUrl(one.getAvatarUrl());
             Integer level= one.getLevel();
             DTO.setLevel(level);
-//
 //            List<Menu> roleMenus = getRoleMenus(role);
 //            AminDTO.setMenus(roleMenus);
             return DTO;

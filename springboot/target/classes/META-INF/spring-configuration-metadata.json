@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "system",
+      "type": "com.liobio.demo.common.config.TokenWhiteListConfig",
+      "sourceType": "com.liobio.demo.common.config.TokenWhiteListConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "system.white-list",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.liobio.demo.common.config.TokenWhiteListConfig"
+    }
+  ],
+  "hints": []
+}

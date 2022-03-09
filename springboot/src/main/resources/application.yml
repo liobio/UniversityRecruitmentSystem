@@ -16,3 +16,23 @@ mybatis-plus:
 files:
   upload:
     path: C:/Users/LIOBIO/Pictures/DemoPicture/
+
+# 访问白名单
+system:
+  whiteList:
+    - /admin/login
+    - /files/*.html
+    - /files/*.js
+    - /files/*.css
+    - /files/*.woff
+    - /files/*.ttf
+    - /files/*.png
+    - /files/*.pdf
+    - /files/*.doc
+    - /files/*.jpg
+    - /files/*.jpeg
+    - /files/*.md
+    - /files/*.xlsx
+    - /files/*.html
+    - /files/*.txt
+

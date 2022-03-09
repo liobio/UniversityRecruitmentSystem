@@ -40,9 +40,8 @@ export default {
   },
   data(){
     return {
-      admin : localStorage.getItem("admin") ? JSON.parse(localStorage.getItem("admin")) : {
+      admin : localStorage.getItem("admin") ? JSON.parse(localStorage.getItem("admin")) :null
 
-      }
     }
   },
   methods:{

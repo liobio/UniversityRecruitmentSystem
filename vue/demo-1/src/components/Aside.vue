@@ -34,7 +34,7 @@
         <span>用户管理</span>
       </el-menu-item>
       <el-menu-item index="files_info">
-        <el-icon><user /></el-icon>
+        <el-icon><document /></el-icon>
         <span>文件管理</span>
       </el-menu-item>
       <el-sub-menu index="dic">
@@ -57,14 +57,14 @@ import {
   UserFilled,
   User,
   HomeFilled,
-  InfoFilled,
+  InfoFilled,Document
 } from '@element-plus/icons-vue'
 
 
 export default {
   name: "Aside",
   components:{
-    Avatar,School,UserFilled,User,HomeFilled,InfoFilled
+    Avatar,School,UserFilled,User,HomeFilled,InfoFilled,Document
   },
   created() {
     console.log(this.$route.path)

@@ -43,7 +43,6 @@ public class AdminController {
         if (StrUtil.isBlank(name) || StrUtil.isBlank(pwd)) {
             return Result.error(Constants.CODE_400, "参数错误");
         }
-
         return Result.success(adminService.login(adminDTO));
 
     }

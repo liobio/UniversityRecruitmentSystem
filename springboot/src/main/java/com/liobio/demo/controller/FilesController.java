@@ -5,9 +5,8 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.liobio.demo.common.utils.Constants;
 import com.liobio.demo.common.utils.Result;
-import com.liobio.demo.entity.AdminEntity;
 import com.liobio.demo.entity.FilesEntity;
 import com.liobio.demo.service.FilesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +14,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
+
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.net.URLEncoder;
-import java.nio.file.Files;
 import java.util.List;
 
 /**
@@ -54,7 +53,10 @@ public class FilesController {
      * @throws IOException
      */
     @PostMapping("/upload")
-    public String upload(@RequestParam MultipartFile file) throws IOException {
+    public Result upload(@RequestParam MultipartFile file,HttpServletRequest request ) throws IOException {
+
+        String token = request.getHeader("token");
+        System.out.println("file token:   "+token);
         String originalFilename = file.getOriginalFilename();
         String type = FileUtil.extName(originalFilename);
         long size = file.getSize();
@@ -84,7 +86,6 @@ public class FilesController {
             url = "http://" + serverIp + ":"+serverPort+"/files/" + fileUUID;
         }
 
-
         // 存储数据库
         FilesEntity saveFile = new FilesEntity();
         saveFile.setName(originalFilename);
@@ -94,7 +95,7 @@ public class FilesController {
         saveFile.setMd5(md5);
         filesService.save(saveFile);
 
-        return url;
+        return Result.success("200");
     }
 
     /**
